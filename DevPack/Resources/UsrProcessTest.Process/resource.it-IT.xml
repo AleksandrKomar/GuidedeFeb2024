@@ -2,7 +2,7 @@
 <Resources Culture="it-IT">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="UserTestProces" />
+			<Item Name="Caption" Value="Business process 1" />
 		</Items>
 	</Group>
 </Resources>

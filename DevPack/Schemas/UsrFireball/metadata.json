@@ -1,10 +1,10 @@
-= MetaData.Schema.UId "c04fb489-9464-454f-9bd1-fc3d4565d128"
-= MetaData.Schema.A2 "UsrRealtyTypeClassic"
+= MetaData.Schema.UId "9a8b64b0-4e4d-4cb5-b375-390bd8f86b22"
+= MetaData.Schema.A2 "UsrFireball"
 = MetaData.Schema.A5 "aff51315-879a-45df-9c2d-f299f5505b5e"
 = MetaData.Schema.B6 "89e8064a-63de-8b20-257d-8c268e94caa3"
 = MetaData.Schema.B8 "8.1.1.3635"
-= MetaData.Schema.EG1.UId "ba6ffa8b-e2e9-4836-9789-459f33edad8e"
-= MetaData.Schema.EG1.A2 "UsrEntity_e9bb416EventsProcess"
+= MetaData.Schema.EG1.UId "3297b80f-a591-410f-ae6b-1ec210e004c3"
+= MetaData.Schema.EG1.A2 "UsrEntity_6213c5dEventsProcess"
 = MetaData.Schema.EG1.A5 "aff51315-879a-45df-9c2d-f299f5505b5e"
 + MetaData.Schema.EG1.B8 "8.1.1.3635"
 + MetaData.Schema.EG1.BK8 "e20c0489-122a-4242-999c-169e8e866fc1"
@@ -39,19 +39,18 @@
 - MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16
 - MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16
 - MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16
-- MetaData.Schema.D2.["9e53fd7c-dde4-4502-a64c-b9e34148108b"].E21
 - MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16
 + MetaData.Schema.D2 {
-  "UId": "2a42d841-8fc4-4e38-9b8f-9e652c7c0752",
-  "A2": "UsrCode",
-  "A3": "c04fb489-9464-454f-9bd1-fc3d4565d128",
-  "A4": "c04fb489-9464-454f-9bd1-fc3d4565d128",
+  "UId": "78a708f5-40c3-1b88-71da-337e1c9b92d8",
+  "A2": "UsrSuperKind",
+  "A3": "9a8b64b0-4e4d-4cb5-b375-390bd8f86b22",
+  "A4": "9a8b64b0-4e4d-4cb5-b375-390bd8f86b22",
   "A5": "aff51315-879a-45df-9c2d-f299f5505b5e",
   "S2": "325a73b8-0f47-44a0-8412-7606f78003ac"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","736c30a7-c0ec-4fa9-b034-2552b319b633","9e53fd7c-dde4-4502-a64c-b9e34148108b","3fabd836-6a53-4d8d-9069-6df88d9dae1e","2a42d841-8fc4-4e38-9b8f-9e652c7c0752"]
-= MetaData.Schema.D20.A2 "UsrRealtyTypeClassicEvents"
-= MetaData.Schema.D36.A3 "c04fb489-9464-454f-9bd1-fc3d4565d128"
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","736c30a7-c0ec-4fa9-b034-2552b319b633","9e53fd7c-dde4-4502-a64c-b9e34148108b","3fabd836-6a53-4d8d-9069-6df88d9dae1e","78a708f5-40c3-1b88-71da-337e1c9b92d8"]
+= MetaData.Schema.D20.A2 "UsrFireballEvents"
+= MetaData.Schema.D36.A3 "9a8b64b0-4e4d-4cb5-b375-390bd8f86b22"
 = MetaData.Schema.D36.BS1 false
 - MetaData.Schema.EG1.B6
 - MetaData.Schema.EG1.BK29

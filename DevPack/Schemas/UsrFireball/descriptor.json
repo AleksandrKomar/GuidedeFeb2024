@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "9a8b64b0-4e4d-4cb5-b375-390bd8f86b22",
+    "Name": "UsrFireball",
+    "ModifiedOnUtc": "\/Date(1708531369000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Fireball"
+  }
+}
