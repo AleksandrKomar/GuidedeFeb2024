@@ -5,6 +5,5 @@
 		<Compile Include="$(PkgPath)/DevPack/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs" Condition="Exists('$(PkgPath)/DevPack/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs')" />
 		<Compile Include="$(PkgPath)/DevPack/Schemas/UsrRealtyTypeClassic/UsrRealtyTypeClassic.cs" Condition="Exists('$(PkgPath)/DevPack/Schemas/UsrRealtyTypeClassic/UsrRealtyTypeClassic.cs')" />
 		<Compile Include="$(PkgPath)/DevPack/Schemas/UsrSnowBall/UsrSnowBall.cs" Condition="Exists('$(PkgPath)/DevPack/Schemas/UsrSnowBall/UsrSnowBall.cs')" />
-		<Compile Include="$(PkgPath)/DevPack/Schemas/BaseEntity/BaseEntity.cs" Condition="Exists('$(PkgPath)/DevPack/Schemas/BaseEntity/BaseEntity.cs')" />
 	</ItemGroup>
 </Project>

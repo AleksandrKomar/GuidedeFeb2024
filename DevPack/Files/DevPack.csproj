@@ -439,7 +439,6 @@
 		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyTypeClassic/UsrRealtyTypeClassic.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyTypeClassic/UsrRealtyTypeClassic.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrSnowBall/UsrSnowBall.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrSnowBall/UsrSnowBall.cs')" />
-		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/BaseEntity/BaseEntity.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/BaseEntity/BaseEntity.cs')" />
 	</ItemGroup>
 	<ItemGroup Label="3rd Party References"></ItemGroup>
 	<Target Name="Paths" BeforeTargets="BeforeCompile">
