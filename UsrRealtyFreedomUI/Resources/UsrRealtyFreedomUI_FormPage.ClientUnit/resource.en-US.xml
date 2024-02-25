@@ -3,11 +3,20 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty FreedomUI form page" />
+			<Item Name="LocalizableStrings.addRecord_26vpzsj_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_awn7yeq_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_c7z1hgt_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_cyi28ar_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_ljeg8z2_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_mszkug8_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.Button_jw36gib_caption.Value" Value="PUSH ME!" />
+			<Item Name="LocalizableStrings.ExpansionPanel_oiq1pus_title.Value" Value="Realty visit (FreedomUI)" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_vgmr75p_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_87xpklk_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_enzvgo5_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_qewxv9i_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_a3pm95x_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_4n64zev_caption.Value" Value="Actions" />
 		</Items>
 	</Group>
 </Resources>
