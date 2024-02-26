@@ -1,3 +1,4 @@
+/*jshint esversion: 11 */
 define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
@@ -153,6 +154,26 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
 				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "UsrCommis",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 5,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrCommis_oqlffpa",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrCommis_oqlffpa",
+					"readonly": true
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -379,6 +400,28 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
+				"name": "UsrCommissionPersent",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 4,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrOfferTypeUsrCommissionPersent",
+					"control": "$PDS_UsrOfferTypeUsrCommissionPersent",
+					"readonly": true,
+					"placeholder": "",
+					"labelPosition": "auto",
+					"tooltip": ""
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 7
+			},
+			{
+				"operation": "insert",
 				"name": "ExpansionPanel_oiq1pus",
 				"values": {
 					"layoutConfig": {
@@ -407,7 +450,7 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 7
+				"index": 8
 			},
 			{
 				"operation": "insert",
@@ -854,6 +897,16 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 								}
 							}
 						}
+					},
+					"PDS_UsrCommis_oqlffpa": {
+						"modelConfig": {
+							"path": "PDS.UsrCommis"
+						}
+					},
+					"PDS_UsrOfferTypeUsrCommissionPersent": {
+						"modelConfig": {
+							"path": "PDS.UsrOfferTypeUsrCommissionPersent"
+						}
 					}
 				}
 			},
@@ -894,7 +947,13 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 					"PDS": {
 						"type": "crt.EntityDataSource",
 						"config": {
-							"entitySchemaName": "UsrRealtyFreedomUI"
+							"entitySchemaName": "UsrRealtyFreedomUI",
+							"attributes": {
+								"UsrOfferTypeUsrCommissionPersent": {
+									"path": "UsrOfferType.UsrCommissionPersent",
+									"type": "ForwardReference"
+								}
+							}
 						},
 						"scope": "page"
 					},
@@ -939,7 +998,21 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 					return next?.handle(request);
 				}
 			},
-			
+			{
+				request: "crt.HandleViewModelAttributeChangeRequest",
+				/* The custom implementation of the system query handler. */
+				handler: async (request, next) => {
+					if (request.attributeName === 'PDS_UsrPrice_gf8xcj1' || 						// if price changed
+					   request.attributeName === 'PDS_UsrOfferTypeUsrCommissionPersent' ) { 		// or percent changed
+						var price = await request.$context.PDS_UsrPrice_gf8xcj1;
+						var percent = await request.$context.PDS_UsrOfferTypeUsrCommissionPersent;
+						var commission = price * percent / 100;
+						request.$context.PDS_UsrCommis_oqlffpa = commission;
+					}
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
+			}
 			
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,

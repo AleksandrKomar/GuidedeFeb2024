@@ -17,6 +17,7 @@
 			<Item Name="LocalizableStrings.GridDetailRefreshBtn_qewxv9i_caption.Value" Value="Refresh" />
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_a3pm95x_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_4n64zev_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.NumberInput_xgcom1a_label.Value" Value="Number" />
 		</Items>
 	</Group>
 </Resources>

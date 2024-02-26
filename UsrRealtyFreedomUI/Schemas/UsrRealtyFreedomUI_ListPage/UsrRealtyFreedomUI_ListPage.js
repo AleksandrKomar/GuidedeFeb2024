@@ -79,8 +79,22 @@ define("UsrRealtyFreedomUI_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 						"basis": "100%",
 						"width": 300
 					},
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						},
+						"editable": {
+							"enable": false,
+							"itemsCreation": false
+						}
+					},
 					"primaryColumnName": "PDS_Id",
-					"sorting": "$ItemsSorting | crt.ToDataTableSortingConfig: 'Items'"
+					"sorting": "$ItemsSorting | crt.ToDataTableSortingConfig: 'Items'",
+					"visible": true,
+					"fitContent": true
 				}
 			},
 			{
