@@ -366,8 +366,13 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="FeatureToggling">
-			<HintPath>$(RelativePkgFolderPath)/FeatureToggling/$(StandalonePackageAssemblyPath)/FeatureToggling.dll</HintPath>
+		<Reference Include="Finesse">
+			<HintPath>$(RelativePkgFolderPath)/Finesse/$(StandalonePackageAssemblyPath)/Finesse.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="OpenIdAuth">
+			<HintPath>$(RelativePkgFolderPath)/OpenIdAuth/$(StandalonePackageAssemblyPath)/OpenIdAuth.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -376,13 +381,8 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="Finesse">
-			<HintPath>$(RelativePkgFolderPath)/Finesse/$(StandalonePackageAssemblyPath)/Finesse.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="OpenIdAuth">
-			<HintPath>$(RelativePkgFolderPath)/OpenIdAuth/$(StandalonePackageAssemblyPath)/OpenIdAuth.dll</HintPath>
+		<Reference Include="FeatureToggling">
+			<HintPath>$(RelativePkgFolderPath)/FeatureToggling/$(StandalonePackageAssemblyPath)/FeatureToggling.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -434,11 +434,18 @@
 	</ItemGroup>
 	<ItemGroup Label="Standalone package external assembly references" />
 	<ItemGroup Label="Entity Files">
+		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicFolder/UsrRealtyClassicFolder.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicFolder/UsrRealtyClassicFolder.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicInFolder/UsrRealtyClassicInFolder.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicInFolder/UsrRealtyClassicInFolder.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassic/UsrRealtyClassic.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassic/UsrRealtyClassic.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrFireball/UsrFireball.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrFireball/UsrFireball.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/Account/Account.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/Account/Account.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicFile/UsrRealtyClassicFile.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicFile/UsrRealtyClassicFile.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrTypeOffer/UsrTypeOffer.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrTypeOffer/UsrTypeOffer.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicInTag/UsrRealtyClassicInTag.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicInTag/UsrRealtyClassicInTag.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyTypeClassic/UsrRealtyTypeClassic.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyTypeClassic/UsrRealtyTypeClassic.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrSnowBall/UsrSnowBall.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrSnowBall/UsrSnowBall.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicTag/UsrRealtyClassicTag.cs" Condition="Exists('$(RelativePkgFolderPath)/DevPack/Schemas/UsrRealtyClassicTag/UsrRealtyClassicTag.cs')" />
 	</ItemGroup>
 	<ItemGroup Label="3rd Party References"></ItemGroup>
 	<Target Name="Paths" BeforeTargets="BeforeCompile">

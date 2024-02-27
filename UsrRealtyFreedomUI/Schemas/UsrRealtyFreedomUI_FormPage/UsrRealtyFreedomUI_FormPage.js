@@ -811,13 +811,37 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 					"PDS_UsrPrice_gf8xcj1": {
 						"modelConfig": {
 							"path": "PDS.UsrPrice"
-						}
+						},
+						
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 50,
+									"message": "#ResourceString(PriceCannotBeLess)#"
+								}
+							}
+						},
+						
 					},
+						
 					"PDS_UsrArea_wgc4p5h": {
 						"modelConfig": {
 							"path": "PDS.UsrArea"
-						}
+						},
+						
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 50,
+									"message": "#ResourceString(AreaCannotBeLess)#"
+								}
+							}
+						},
+						
 					},
+						
 					"PDS_UsrCurrency_pg7s160": {
 						"modelConfig": {
 							"path": "PDS.UsrCurrency"
@@ -1016,6 +1040,39 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
-		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
+		validators: /**SCHEMA_VALIDATORS*/{
+			/* The validator type must contain a vendor prefix.
+			Format the validator type in PascalCase. */
+			"usr.DGValidator": {
+				validator: function (config) {
+					return function (control) {
+						let value = control.value;
+						let minValue = config.minValue;
+						let valueIsCorrect = value >= minValue;
+						var result;
+						if (valueIsCorrect) {
+							result = null;
+						} else {
+							result = {
+								"usr.DGValidator": { 
+									message: config.message
+								}
+							};
+						}
+						return result;
+					};
+				},
+				params: [
+					{
+						name: "minValue"
+					},
+					{
+						name: "message"
+					}
+				],
+				async: false
+			}
+			
+		}/**SCHEMA_VALIDATORS*/
 	};
 });
