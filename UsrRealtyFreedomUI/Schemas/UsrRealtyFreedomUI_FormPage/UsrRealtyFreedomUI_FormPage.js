@@ -1,4 +1,3 @@
-/*jshint esversion: 11 */
 define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
@@ -39,6 +38,47 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
+				"name": "ActoinsButton",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_dldrmdg_caption)#",
+					"color": "primary",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"menuItems": [],
+					"clickMode": "menu",
+					"icon": "actions-button-icon"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_CalcAvgPrice",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_zv3x56z_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrCalculateAveragePriceProcess",
+							"processRunType": "ForTheSelectedPage",
+							"recordIdProcessParameterName": "RealtyIdParameter"
+						}
+					},
+					"items": [],
+					"icon": "calculator-button-icon"
+				},
+				"parentName": "ActoinsButton",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "PushMeButton",
 				"values": {
 					"type": "crt.Button",
@@ -56,7 +96,7 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 				},
 				"parentName": "CardToggleContainer",
 				"propertyName": "items",
-				"index": 0
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -812,7 +852,6 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 						"modelConfig": {
 							"path": "PDS.UsrPrice"
 						},
-						
 						"validators": {
 							"MySuperValidator": {
 								"type": "usr.DGValidator",
@@ -821,15 +860,12 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 									"message": "#ResourceString(PriceCannotBeLess)#"
 								}
 							}
-						},
-						
+						}
 					},
-						
 					"PDS_UsrArea_wgc4p5h": {
 						"modelConfig": {
 							"path": "PDS.UsrArea"
 						},
-						
 						"validators": {
 							"MySuperValidator": {
 								"type": "usr.DGValidator",
@@ -838,10 +874,8 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 									"message": "#ResourceString(AreaCannotBeLess)#"
 								}
 							}
-						},
-						
+						}
 					},
-						
 					"PDS_UsrCurrency_pg7s160": {
 						"modelConfig": {
 							"path": "PDS.UsrCurrency"
